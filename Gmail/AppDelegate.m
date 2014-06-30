@@ -44,7 +44,7 @@
 
         if (previous == self.unreadEmailCount)
             return;
-        NSLog(@"lefit");
+
         [[NSApp dockTile] setBadgeLabel:self.unreadEmailCount == 0 ? @"" : [NSString stringWithFormat:@"%d", self.unreadEmailCount]];
 
         if (previous < self.unreadEmailCount)
