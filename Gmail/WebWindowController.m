@@ -33,6 +33,7 @@
         [self.webView.mainFrame loadRequest:aRequest];
         [self.webView setShouldCloseWithWindow:shouldDisposeWhenClosed];
         [self.webView setApplicationNameForUserAgent:@"Safari"];
+        [self.webView setPreferences:[WebPreferences standardPreferences]];
 
         [self.class.webWindowControllers addObject:self];
     }
