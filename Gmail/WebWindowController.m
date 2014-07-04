@@ -93,6 +93,11 @@
         [self.window makeKeyAndOrderFront:self];
 }
 
+- (void)webView:(WebView *)aWebView runJavaScriptAlertPanelWithMessage:(NSString *)aMessage initiatedByFrame:(WebFrame *)aWebFrame
+{
+    NSLog(@"%@", aMessage);
+}
+
 @end
 
 @implementation WebWindowController (WebPolicyDelegate)

@@ -59,13 +59,13 @@
 {
     NSString * inboxString = [self.mainWebWindowController.webView stringByEvaluatingJavaScriptFromString:[[self class] unreadEmailCountScript]];
     NSScanner * scanner = [NSScanner scannerWithString:inboxString];
-    
+
     [scanner setCharactersToBeSkipped:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]];
-    
+
     int unreadEmailCount = 0;
-    
+
     [scanner scanInt:&unreadEmailCount];
-    
+
     self.unreadEmailCount = unreadEmailCount;
 }
 
