@@ -32,7 +32,7 @@
 
         [self.webView.mainFrame loadRequest:aRequest];
         [self.webView setShouldCloseWithWindow:shouldDisposeWhenClosed];
-        [self.webView setApplicationNameForUserAgent:@"Safari"];
+        [self.webView setApplicationNameForUserAgent:@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14"];
         [self.webView setPreferences:[WebPreferences standardPreferences]];
 
         [self.class.webWindowControllers addObject:self];

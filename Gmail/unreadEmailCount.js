@@ -2019,7 +2019,12 @@ if ( !assert(function( div ) {
 }
 
 var inboxAnchors = Sizzle("[href='https://mail.google.com/mail/u/0/#inbox']");
+var inboxStr = inboxAnchors.length > 0 ? inboxAnchors[0].innerText : "0";
+var inboxMatches = /[^\(]*\(([\d,]*)\)/g.exec(inboxStr);
 
-return inboxAnchors.length > 0 ? inboxAnchors[0].innerText : "Inbox";
+if (inboxMatches && inboxMatches.length > 1)
+    return inboxMatches[1].replace(",", "");
+
+return "0";
 
 })( window );
